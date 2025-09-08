@@ -19,6 +19,7 @@ namespace switchCase {
     /**
      * Case Block Container
      */
+    /**********************
     //% block="case $match"
     //% blockId=switchcase_case_block
     //% group="Control"
@@ -28,6 +29,7 @@ namespace switchCase {
     export function caseBlock(match: any): void {
         //Placeholder for CodeGen
     }
+    *********************/
 
     /**
      * Default-Case Block Container
