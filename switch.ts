@@ -34,6 +34,7 @@ namespace switchCase {
     /**
      * Default-Case Block Container
      */
+    /**********************
     //% block="default case"
     //% blockId=switchcase_default_case_block
     //% group="Control"
@@ -42,6 +43,7 @@ namespace switchCase {
     export function defaultCaseBlock(): void {
         //Placeholder for CodeGen
     }
+    *********************/
 
     
 }

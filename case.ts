@@ -16,4 +16,16 @@ namespace switchCase {
         //Placeholder for CodeGen
     }
 
+    /**
+     * Default-Case Block Container
+     */
+    //% block="default case"
+    //% blockId=switchcase_default_case_block
+    //% group="Control"
+    //% weight=80
+    //% draggableStatement=true
+    export function defaultCaseBlock(): void {
+        //Placeholder for CodeGen
+    }
+
 }
