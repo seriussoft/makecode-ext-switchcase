@@ -1,7 +1,7 @@
 
 
 
-namespace switchCase {
+namespace switchcase {
 
     /**
      * Case Block Container
