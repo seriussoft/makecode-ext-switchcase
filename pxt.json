@@ -1,6 +1,6 @@
 {
     "name": "SwitchCase"
-    , "version": "0.0.0"
+    , "version": "0.0.1"
     , "description": "Adds a switch-case block for MakeCode Arcade"
     , "files": [
         "main.ts"
