@@ -1,6 +1,5 @@
-import { SwitchContext } from "../classes/switchcontext"
+import { SwitchContext } from "./switchcontext";
 
-//namespace classes {
 
 class SwitchManager {
   private Switches: { [Name: string]: SwitchContext } = {};
@@ -30,5 +29,5 @@ class SwitchManager {
    */
 
 }
-//}
+
 
