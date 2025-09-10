@@ -2,8 +2,16 @@
 namespace switchcase {
   export class SwitchContext {
     private Cases: { Match: any, Handler: () => void, IsDefault?: boolean }[] = [];
+    private Name: string;
     private Value: any;
     public IsValueSet: boolean;
+
+    constructor(name: string, value: any) {
+      this.Value = value;
+      this.Name = name;
+    }
+
+    
 
     addCase(match: any, handler: () => void): void {
       this.Cases.push({ Match: match, Handler: handler });

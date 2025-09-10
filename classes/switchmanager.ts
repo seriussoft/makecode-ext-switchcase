@@ -4,10 +4,20 @@ namespace switchcase {
   export class SwitchManager {
     private Switches: { [Name: string]: SwitchContext } = {};
 
+    constructor() {
+      this.create("default");
+    }
+
     create(name: string): SwitchContext {
-      const ctx = new SwitchContext();
+      const ctx = new SwitchContext(name, {});
       this.Switches[name] = ctx;
       return ctx;
+    }
+
+    createWithValue(name: string, value: any): SwitchContext {
+      let cxt = this.create(name);
+      cxt.setValue(value);
+      return cxt;
     }
 
     get(name: string): SwitchContext {
