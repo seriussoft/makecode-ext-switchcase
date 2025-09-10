@@ -1,6 +1,6 @@
-//namespace classes {
 
-class SwitchContext {
+
+export class SwitchContext {
   private Cases: { Match: any, Handler: () => void, IsDefault?: boolean }[] = [];
 
   addCase(match: any, handler: () => void): void {
@@ -132,4 +132,4 @@ class SwitchContext {
    */
   }
 
-//}
+
