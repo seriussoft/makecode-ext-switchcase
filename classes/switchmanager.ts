@@ -2,7 +2,7 @@ import { SwitchContext } from "../classes/switchcontext"
 
 //namespace classes {
 
-export class SwitchManager {
+class SwitchManager {
   private Switches: { [Name: string]: SwitchContext } = {};
 
   create(name: string): SwitchContext {
