@@ -4,8 +4,10 @@
     , "description": "Adds a switch-case block for MakeCode Arcade"
     , "files": [
         "main.ts"
-        , "switch.ts"
-        , "case.ts"
+        , "switchblock.ts"
+        , "caseblock.ts"
+        , "classes/switchcontext.ts"
+        , "classes/switchmanager.ts"
     ],
     " public": true
     , "supportedTargets": [
