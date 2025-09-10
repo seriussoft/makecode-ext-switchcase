@@ -13,8 +13,11 @@ namespace switchcase {
    */
 
   let switchManager: SwitchManager = new switchcase.SwitchManager();
-  local: let currentSwitch: SwitchContext = switchManager.create("default");
-  local: let currentSwitchName: string = "default";
+  let currentSwitch: SwitchContext = switchManager.create("default");
+  let currentSwitchName: string = "default";
+  console.debug(currentSwitchName);
+  
+
   /**
    * Switch Block Container
    */
