@@ -14,6 +14,7 @@ namespace switchcase {
 
   let switchManager: SwitchManager = new switchcase.SwitchManager();
   let currentSwitch: SwitchContext = switchManager.create("default");
+  let switchContext: SwitchContext = currentSwitch;
   let currentSwitchName: string = "default";
   console.debug(currentSwitchName);
   
@@ -109,8 +110,10 @@ namespace switchcase {
   //% blockSetVariable=switchContext
   export function createSwitchFull(name: string, value: any): SwitchContext {
     let cxt = createSwitch(name);
-    if (cxt)
+    if (cxt) {
       cxt.setValue(value);
+      switchContext = cxt;
+    }
 
     return cxt;
   }
