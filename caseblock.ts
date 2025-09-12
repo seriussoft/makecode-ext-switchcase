@@ -115,9 +115,11 @@ namespace switchcase {
   //% block="[Advanced/Test/Debug] | switch $name | does case match $match?"
   //% blockId=switchcase_case_block_value
   //% alias=switchcase_case_block
+  //% blockAliasFor="switchcase.caseBlock"
   //% group="Advanced"
   //% weight=80
-  //% draggableParameters
+  //% draggableParameters="reporter"
+  //% inlineInput="external"
   //% expandInput=true
   //% match.shadow="dropdown"
   //% match.defl="PowerUps.None
