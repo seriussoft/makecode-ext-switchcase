@@ -52,10 +52,10 @@ namespace switchcase {
    */
   //% block="case $match do $handler"
   //% blockId=switchcase_case_block
-  //% group="Control"
+  //% group="Core"
   //% weight=90
-  //% draggableParameters
-  //% draggableStatement=true
+  //% draggableParameters=reporter
+  //% draggableStatement=reporter
   export function caseBlock(name: string, match: any, handler: () => void): void {
     //Placeholder for CodeGen
     //currentSwitchCase.addCase(match, handler)
@@ -80,9 +80,9 @@ namespace switchcase {
    */
   //% block="[Advanced/Test/Debug] switch $name matches case $match?"
   //% blockId=switchcase_case_block_value
-  //% group="Control"
+  //% group="Advanced"
   //% weight=80
-  //% draggableParameters
+  //% draggableParameters=reporter
   export function caseBlockValue(name: string, match: any): boolean {
     //return match === switchValue || match == switchValue;
     let cxt = switchcase.createSwitch(name);
@@ -100,7 +100,7 @@ namespace switchcase {
   //% blockId=switchcase_default_case_block
   //% group="Control"
   //% weight=70
-  //% draggableStatement=true
+  //% draggableStatement=enabled
   export function defaultCaseBlock(name: string, handler: () => void): void {
     
     let cxt = switchcase.createSwitch(name);
