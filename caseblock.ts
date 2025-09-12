@@ -1,7 +1,20 @@
 //import { SwitchContext } from "./classes/switchcontext";
 //import { SwitchManager } from "./classes/switchmanager";
 
-
+/**
+ * Logic: Switch-Case
+ * 
+ * color:  "#d9d3c4"
+ * color2: "#ceb588"
+ * Icons:
+ *   lightning-bolt:  "\uf0e7"
+ *   fa-scroll:       "\uf70e"
+ *   fa-book:         "\uf02d"
+ *   fa-file-alt:     "\uf15c"
+ */
+//% block="Logic: Switch-Case"
+//% color="#d9d3c4" weight=300 icon="\uf70e"
+//% groups=["Core","Advanced","Debug","Test"]
 namespace switchcase {
 
 
@@ -44,18 +57,39 @@ namespace switchcase {
    * SwitchManager { }
    * 
    */
-  
+
+  //% block="PowerUp"
+  //% blockId=switchcase_powerup
+  export enum PowerUps {
+    None = 0x0,
+    Fireball = 0x1 << 0,
+    Shell = 0x1 << 1,
+    Poisonous = 0x1 << 2,
+  }
+
+  //% block="PowerDown"
+  //% blockId=switchcase_powerdown
+  export enum PowerDowns {
+    None = 0x0,
+    Stunned = 0x1 << 0,
+    Weak = 0x1 << 1,
+    Poisoned = 0x1 << 2,
+  }
     
 
   /**
    * Case Block Container
    */
-  //% block="case $match do $handler"
+  //% block="switch:$name | case $match do $handler"
   //% blockId=switchcase_case_block
-  //% group="Control"
+  //% group="Core"
   //% weight=90
+  //% inlineInput=false
+  //% expandInput=true
   //% draggableParameters
-  //% draggableStatement=true
+  //% draggableStatement=enabled
+  //% match.shadow="dropdown"
+  //% match.defl="PowerUps.None"
   export function caseBlock(name: string, match: any, handler: () => void): void {
     //Placeholder for CodeGen
     //currentSwitchCase.addCase(match, handler)
@@ -78,11 +112,15 @@ namespace switchcase {
    * Case Block Value
    * Outside of debugging, testing, or rare niche scenarios: this may not be useful
    */
-  //% block="[Advanced/Test/Debug] switch $name matches case $match?"
+  //% block="[Advanced/Test/Debug] | switch $name | does case match $match?"
   //% blockId=switchcase_case_block_value
-  //% group="Control"
+  //% alias=switchcase_case_block
+  //% group="Advanced"
   //% weight=80
   //% draggableParameters
+  //% expandInput=true
+  //% match.shadow="dropdown"
+  //% match.defl="PowerUps.None
   export function caseBlockValue(name: string, match: any): boolean {
     //return match === switchValue || match == switchValue;
     let cxt = switchcase.createSwitch(name);
@@ -96,11 +134,13 @@ namespace switchcase {
   /**
    * Default-Case Block Container
    */
-  //% block="default case"
+  //% block="switch $name | default case handles $handle"
   //% blockId=switchcase_default_case_block
-  //% group="Control"
+  //% group="Core"
   //% weight=70
-  //% draggableStatement=true
+  //% draggableParameters
+  //% draggableStatement=enabled
+  //% expandInput=true
   export function defaultCaseBlock(name: string, handler: () => void): void {
     
     let cxt = switchcase.createSwitch(name);
