@@ -84,7 +84,7 @@ namespace switchcase {
   //% blockId=switchcase_case_block
   //% group="Core"
   //% weight=90
-  //% inlineInput=false
+  //% inlineInputMode="external"
   //% expandInput=true
   //% draggableParameters
   //% draggableStatement=enabled
@@ -119,7 +119,7 @@ namespace switchcase {
   //% group="Advanced"
   //% weight=80
   //% draggableParameters="reporter"
-  //% inlineInput="external"
+  //% inlineInputMode="external"
   //% expandInput=true
   //% match.shadow="dropdown"
   //% match.defl="PowerUps.None
@@ -141,7 +141,8 @@ namespace switchcase {
   //% group="Core"
   //% weight=70
   //% draggableParameters
-  //% draggableStatement=enabled
+  //% draggableStatement="enabled"
+  //% inlineInputMode="external"
   //% expandInput=true
   export function defaultCaseBlock(name: string, handler: () => void): void {
     
